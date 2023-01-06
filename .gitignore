@@ -83,3 +83,10 @@ lint/generated/
 lint/outputs/
 lint/tmp/
 # lint/reports/
+
+# Keystore
+keystore.properties
+keystore.jks
+
+# Might have sensitive info like Jitpack
+gradle.properties
