@@ -1,4 +1,4 @@
-package com.example.ganesha
+package com.example.ganesha.app
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.example.ganesha.R
 import com.example.ganesha.databinding.FragmentFirstBinding
 
 /**
