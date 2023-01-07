@@ -82,3 +82,6 @@ keystore.jks
 
 # Might have sensitive info like Jitpack
 gradle.properties
+
+# Plaid API
+plaid_api.properties
