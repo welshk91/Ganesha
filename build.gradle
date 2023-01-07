@@ -7,6 +7,11 @@ buildscript {
     ext.nav_version = '2.5.3'
     ext.gson_version = '2.9.0'
     ext.retrofit_version = '2.9.0'
+    ext.hilt_version = '2.43'
+
+    dependencies {
+        classpath("com.google.dagger:hilt-android-gradle-plugin:$hilt_version")
+    }
 }
 
 plugins {
