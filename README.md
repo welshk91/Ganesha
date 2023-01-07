@@ -21,6 +21,7 @@ Coming soon...
 
 ## Sources
 * [Plaid API](https://plaid.com/docs/api/)
+* [Plaid - Quickstart](https://plaid.com/docs/quickstart/#how-it-works)
 
 ## License
 	Copyright 2023 Kevin Welsh
