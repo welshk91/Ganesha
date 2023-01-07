@@ -22,6 +22,8 @@ Coming soon...
 ## Sources
 * [Plaid API](https://plaid.com/docs/api/)
 * [Plaid - Quickstart](https://plaid.com/docs/quickstart/#how-it-works)
+* [Plaid Sample App](https://github.com/plaid/plaid-link-android)
+* [Plaid Link Docs](https://plaid.com/docs/link/android/)
 
 ## License
 	Copyright 2023 Kevin Welsh
