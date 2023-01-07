@@ -1,4 +1,4 @@
-package com.example.ganesha.app.data.models
+package com.example.ganesha.data.models
 
 /**
  * https://plaid.com/docs/api/items/#item-webhook-update-response-item-error-error-type

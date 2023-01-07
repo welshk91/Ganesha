@@ -1,4 +1,4 @@
-package com.example.ganesha.app.data.models
+package com.example.ganesha.data.models
 
 import com.google.gson.annotations.SerializedName
 

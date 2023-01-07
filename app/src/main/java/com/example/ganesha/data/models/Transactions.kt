@@ -1,11 +1,11 @@
-package com.example.ganesha.app.data.models
+package com.example.ganesha.data.models
 
 import com.google.gson.annotations.SerializedName
 
 /**
- * https://plaid.com/docs/api/items/#item-get-response-status-investments
+ * https://plaid.com/docs/api/items/#item-get-response-status-transactions
  */
-data class Investments(
+data class Transactions(
     @SerializedName("last_successful_update")
     var lastSuccessfulUpdate: String?,
     @SerializedName("last_failed_update")

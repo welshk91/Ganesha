@@ -1,6 +1,6 @@
 package com.example.ganesha.network
 
-import com.example.ganesha.app.data.models.ItemResponse
+import com.example.ganesha.data.models.ItemResponse
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
