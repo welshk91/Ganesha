@@ -7,12 +7,12 @@ plugins {
 
 android {
     namespace 'com.example.ganesha'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.example.ganesha"
         minSdk 21
-        targetSdk 33
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 
@@ -46,6 +46,7 @@ android {
         dataBinding true
         viewBinding true
     }
+    buildToolsVersion '34.0.0'
 }
 
 dependencies {
@@ -53,7 +54,7 @@ dependencies {
     implementation "androidx.appcompat:appcompat:$appcompat_version"
     implementation "com.google.android.material:material:$material_lib_version"
     implementation "androidx.constraintlayout:constraintlayout:$constraint_layout_version"
-    implementation "androidx.navigation:navigation-fragment:$nav_version"
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
 
     //Networking
