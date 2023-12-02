@@ -8,6 +8,7 @@ import com.example.ganesha.data.DataRepository
 import com.example.ganesha.data.models.LinkResponse
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import okhttp3.Request
 import javax.inject.Inject
 
 
@@ -15,9 +16,9 @@ import javax.inject.Inject
 class LinkTokenApiViewModel @Inject constructor(private val repository: DataRepository) :
     ViewModel() {
 
-    val linkToken: LiveData<String>
-        get() = _linkToken
-    private val _linkToken = MutableLiveData<String>()
+    val linkRequest: LiveData<Request>
+        get() = _linkRequest
+    private val _linkRequest = MutableLiveData<Request>()
 
     val linkResponse: LiveData<LinkResponse>
         get() = _linkResponse
@@ -32,12 +33,13 @@ class LinkTokenApiViewModel @Inject constructor(private val repository: DataRepo
         _linkLoading.postValue(true)
         viewModelScope.launch {
             val response = repository.createLinkToken()
+            _linkRequest.postValue(response.raw().request())
             if (response.isSuccessful) {
                 _linkLoading.postValue(false)
                 val details = response.body()
                 details?.let {
                     _linkResponse.postValue(it)
-                    _linkToken.postValue(it.linkToken)
+                    //linkRequest.postValue(request)
                 }
             } else {
                 //Handle error UI stuff here
