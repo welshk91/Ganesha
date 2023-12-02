@@ -1,7 +1,7 @@
 package com.example.ganesha.data.models
 
 /**
- * https://www.plaid.com/docs/identity-verification/#supported-languages
+ * https://plaid.com/docs/api/tokens/#link-token-create-request-language
  */
 enum class Languages(val language: String) {
     DANISH("da"),
