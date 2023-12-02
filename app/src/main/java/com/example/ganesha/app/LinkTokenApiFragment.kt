@@ -15,7 +15,7 @@ import dagger.hilt.android.AndroidEntryPoint
  * A simple [Fragment] subclass as the second destination in the navigation.
  */
 @AndroidEntryPoint
-class GetLinkTokenFragment : Fragment() {
+class LinkTokenApiFragment : Fragment() {
     private lateinit var binding: FragmentGetLinkTokenBinding
     private val viewModel: GetLinkTokenViewModel by activityViewModels()
 
@@ -36,7 +36,7 @@ class GetLinkTokenFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.buttonGetLinkToken.setOnClickListener {
+        binding.buttonCreateLinkToken.setOnClickListener {
             viewModel.fetchLinkToken()
         }
 

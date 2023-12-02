@@ -3,9 +3,10 @@
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
     <string name="dashboard_fragment_label">Dashboard Fragment</string>
-    <string name="get_link_token_fragment_label">Get Link Token Fragment</string>
+    <string name="link_token_api_fragment_label">Link Token API</string>
     <string name="link_token">Link Token</string>
-    <string name="get_link_token">Get Link Token</string>
+    <string name="create_link_token">Create Link Token</string>
+    <string name="link_token_apis">Link Token APIs</string>
 
     <string name="get_link_token_response">Get Link Token Response</string>
 </resources>

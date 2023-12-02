@@ -33,7 +33,7 @@ class DashboardFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonGetLinkToken.setOnClickListener {
+        binding.buttonLinkTokenApis.setOnClickListener {
             findNavController().navigate(R.id.action_DashboardFragment_to_GetLinkTokenFragment)
         }
     }

@@ -12,10 +12,10 @@
         android:padding="16dp">
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/button_get_link_token"
+            android:id="@+id/button_link_token_apis"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/get_link_token"
+            android:text="@string/link_token_apis"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
