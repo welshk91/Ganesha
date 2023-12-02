@@ -12,13 +12,13 @@ data class LinkRequest(
     @SerializedName("client_name")
     var clientName: String,
     @SerializedName("products")
-    var products: List<Products> = listOf<Products>(Products.INVESTMENTS),
+    var products: List<String> = listOf<String>(Products.TRANSACTIONS.toString()),
+    @SerializedName("required_if_supported_products")
+    var requiredIfSupportedProducts: List<String> = listOf<String>(Products.LIABILITIES.toString()),
     @SerializedName("country_codes")
-    var countryCodes: List<CountryCodes> = listOf<CountryCodes>(CountryCodes.US),
-    @SerializedName("languages")
-    var languages: String = "en",
-    @SerializedName("webhook")
-    var webhook: String,
+    var countryCodes: List<String> = listOf<String>(CountryCodes.US.toString()),
+    @SerializedName("language")
+    var language: String = "en",
     @SerializedName("android_package_name")
     var androidPackageName: String,
 )
