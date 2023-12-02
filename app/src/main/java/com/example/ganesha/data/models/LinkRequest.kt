@@ -18,7 +18,7 @@ data class LinkRequest(
     @SerializedName("country_codes")
     var countryCodes: List<String> = listOf<String>(CountryCodes.US.toString()),
     @SerializedName("language")
-    var language: String = "en",
+    var language: String = Languages.ENGLISH.language,
     @SerializedName("android_package_name")
     var androidPackageName: String,
 )
