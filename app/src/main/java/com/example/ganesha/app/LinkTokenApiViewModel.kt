@@ -28,7 +28,7 @@ class LinkTokenApiViewModel @Inject constructor(private val repository: DataRepo
         get() = _linkLoading
     private val _linkLoading = MutableLiveData<Boolean>()
 
-    //Get the days data in detail
+    //Fetch a link token
     fun fetchLinkToken() {
         _linkLoading.postValue(true)
         viewModelScope.launch {
