@@ -20,10 +20,9 @@ class DataRepository {
         var linkRequest = LinkRequest(
             clientId = "",
             secret = "",
-            user = LinkUser(""),
-            clientName = "",
-            webhook = "",
-            androidPackageName = ""
+            user = LinkUser("123456"),
+            clientName = "demo_app",
+            androidPackageName = "com.example.ganesha"
         )
 
         val response = apiInterface.getLinkToken(linkRequest)
