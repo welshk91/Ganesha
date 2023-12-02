@@ -31,7 +31,7 @@ class GetLinkTokenViewModel @Inject constructor(private val repository: DataRepo
     fun fetchLinkToken() {
         _linkLoading.postValue(true)
         viewModelScope.launch {
-            val response = repository.getLinkToken()
+            val response = repository.createLinkToken()
             if (response.isSuccessful) {
                 _linkLoading.postValue(false)
                 val details = response.body()

@@ -14,7 +14,7 @@ interface RestService {
 
     @Headers("Content-Type: application/json")
     @POST("/link/token/create")
-    suspend fun getLinkToken(
+    suspend fun createLinkToken(
         @Body request: LinkRequest,
     ): Response<LinkResponse>
 

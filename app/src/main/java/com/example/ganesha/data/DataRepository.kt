@@ -14,7 +14,7 @@ class DataRepository {
     /**
      * https://plaid.com/docs/api/tokens/#linktokencreate
      */
-    suspend fun getLinkToken(): Response<LinkResponse> = withContext(Dispatchers.IO) {
+    suspend fun createLinkToken(): Response<LinkResponse> = withContext(Dispatchers.IO) {
         val retrofit = RetrofitClient.getInstance()
         val apiInterface = retrofit.create(RestService::class.java)
         var linkRequest = LinkRequest(
@@ -25,7 +25,7 @@ class DataRepository {
             androidPackageName = "com.example.ganesha"
         )
 
-        val response = apiInterface.getLinkToken(linkRequest)
+        val response = apiInterface.createLinkToken(linkRequest)
         response
     }
 
