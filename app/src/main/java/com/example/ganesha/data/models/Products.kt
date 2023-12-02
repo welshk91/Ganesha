@@ -22,5 +22,12 @@ enum class Products {
     STANDING_ORDERS,
     TRANSFER,
     EMPLOYMENT,
-    RECURRING_TRANSACTIONS
+    RECURRING_TRANSACTIONS;
+
+    /**
+     * Make sure string value is lowercase for API
+     */
+    override fun toString(): String {
+        return super.toString().lowercase()
+    }
 }
