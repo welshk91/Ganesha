@@ -40,7 +40,7 @@ class LinkTokenApiFragment : Fragment() {
             viewModel.fetchLinkToken()
         }
 
-        viewModel.linkLoading.observe(this){
+        viewModel.linkLoading.observe(viewLifecycleOwner){
             if (it) {
                 binding.progressGetLinkToken.visibility = View.VISIBLE
             } else {
