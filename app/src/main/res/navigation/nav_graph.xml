@@ -20,5 +20,5 @@
         android:id="@+id/GetLinkTokenFragment"
         android:name="com.example.ganesha.app.LinkTokenApiFragment"
         android:label="@string/link_token_api_fragment_label"
-        tools:layout="@layout/fragment_get_link_token" />
+        tools:layout="@layout/fragment_link_token_api" />
 </navigation>

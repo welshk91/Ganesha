@@ -8,7 +8,7 @@
 
         <variable
             name="viewModel"
-            type="com.example.ganesha.app.GetLinkTokenViewModel" />
+            type="com.example.ganesha.app.LinkTokenApiViewModel" />
     </data>
 
     <androidx.core.widget.NestedScrollView

@@ -8,7 +8,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import com.example.ganesha.R
-import com.example.ganesha.databinding.FragmentGetLinkTokenBinding
+import com.example.ganesha.databinding.FragmentLinkTokenApiBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 /**
@@ -16,8 +16,8 @@ import dagger.hilt.android.AndroidEntryPoint
  */
 @AndroidEntryPoint
 class LinkTokenApiFragment : Fragment() {
-    private lateinit var binding: FragmentGetLinkTokenBinding
-    private val viewModel: GetLinkTokenViewModel by activityViewModels()
+    private lateinit var binding: FragmentLinkTokenApiBinding
+    private val viewModel: LinkTokenApiViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,7 +25,7 @@ class LinkTokenApiFragment : Fragment() {
     ): View {
         binding = DataBindingUtil.inflate(
             inflater,
-            R.layout.fragment_get_link_token,
+            R.layout.fragment_link_token_api,
             container,
             false
         )

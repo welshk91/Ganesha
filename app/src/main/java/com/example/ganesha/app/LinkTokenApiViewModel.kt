@@ -12,7 +12,7 @@ import javax.inject.Inject
 
 
 @HiltViewModel
-class GetLinkTokenViewModel @Inject constructor(private val repository: DataRepository) :
+class LinkTokenApiViewModel @Inject constructor(private val repository: DataRepository) :
     ViewModel() {
 
     val linkToken: LiveData<String>
