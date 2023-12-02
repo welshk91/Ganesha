@@ -39,5 +39,13 @@ class GetLinkTokenFragment : Fragment() {
         binding.buttonGetLinkToken.setOnClickListener {
             viewModel.fetchLinkToken()
         }
+
+        viewModel.linkLoading.observe(this){
+            if (it) {
+                binding.progressGetLinkToken.visibility = View.VISIBLE
+            } else {
+                binding.progressGetLinkToken.visibility = View.INVISIBLE
+            }
+        }
     }
 }

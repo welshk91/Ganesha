@@ -15,21 +15,34 @@ import javax.inject.Inject
 class GetLinkTokenViewModel @Inject constructor(private val repository: DataRepository) :
     ViewModel() {
 
+    val linkToken: LiveData<String>
+        get() = _linkToken
+    private val _linkToken = MutableLiveData<String>()
+
     val linkResponse: LiveData<LinkResponse>
         get() = _linkResponse
     private val _linkResponse = MutableLiveData<LinkResponse>()
 
+    val linkLoading: LiveData<Boolean>
+        get() = _linkLoading
+    private val _linkLoading = MutableLiveData<Boolean>()
+
     //Get the days data in detail
     fun fetchLinkToken() {
+        _linkLoading.postValue(true)
         viewModelScope.launch {
             val response = repository.getLinkToken()
             if (response.isSuccessful) {
+                _linkLoading.postValue(false)
                 val details = response.body()
                 details?.let {
                     _linkResponse.postValue(it)
+                    _linkToken.postValue(it.linkToken)
                 }
             } else {
                 //Handle error UI stuff here
+                _linkLoading.postValue(false)
+                _linkResponse.postValue(response.body())
             }
         }
     }
