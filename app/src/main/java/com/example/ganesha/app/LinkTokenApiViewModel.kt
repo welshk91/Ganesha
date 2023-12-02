@@ -39,7 +39,6 @@ class LinkTokenApiViewModel @Inject constructor(private val repository: DataRepo
                 val details = response.body()
                 details?.let {
                     _linkResponse.postValue(it)
-                    //linkRequest.postValue(request)
                 }
             } else {
                 //Handle error UI stuff here
