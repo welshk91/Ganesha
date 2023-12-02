@@ -6,14 +6,16 @@ import com.example.ganesha.data.models.LinkResponse
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.GET
+import retrofit2.http.Headers
 import retrofit2.http.POST
 import retrofit2.http.Query
 
 interface RestService {
 
+    @Headers("Content-Type: application/json")
     @POST("/link/token/create")
     suspend fun getLinkToken(
-        @Body linkRequest: LinkRequest,
+        @Body request: LinkRequest,
     ): Response<LinkResponse>
 
     @GET("/item/get")
